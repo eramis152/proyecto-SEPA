@@ -1,5 +1,7 @@
 # proyecto-SEPA
 
+https://docs.oracle.com/cd/E39564_01/doc.91/e60209/fields_sepa_pay_file_appx.htm
+
 <?xml version="1.0"???? encoding="utf-8" ?>
 <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03" xmlns:xsi="http:⇒
 //www.w3.org/2001/XMLSchema-instance">
@@ -328,14 +330,14 @@
 <!-- Estructurada
 (*) Si está estructurado: -->
 
-<RmtInf>
-  <Strd>
+<RmtInf> <!-- Información de remesa -->
+  <Strd> <!-- Información de la transacción -->
     <CdtrRefinf>
       <Tp>
-        <CdOrPrtry>
-          <Cd>SCOR</Cd>
+        <CdOrPrtry> <!-- Codigo de codificacion -->
+          <Cd>SCOR</Cd> <!-- Codigo -->
         </CdOrPrtry>
-      <Issr> Vision Operations</Issr>
+      <Issr> Vision Operations</Issr> <!-- Emisor de identificación de la parte generadora -->
       </Tp>
       <Ref>010806817183</Ref>
     </CdtrRefInf>
