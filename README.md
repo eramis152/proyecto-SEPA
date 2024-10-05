@@ -24,3 +24,9 @@ Antes de comenzar, asegúrate de que tu sistema cumple con los siguientes requis
     npm install
     ```
 
+  - Por ultimo para lanzar el proyecto:
+    ```bash
+    ng serve
+    ```
+
+
