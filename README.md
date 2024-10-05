@@ -1,17 +1,102 @@
-# proyecto-SEPA
-<!-- Estructurada
-(*) Si está estructurado: -->
-
-<RmtInf> <!-- Información de remesa -->
-  <Strd> <!-- Información de la transacción -->
-    <CdtrRefinf>
-      <Tp>
-        <CdOrPrtry> <!-- Codigo de codificacion -->
-          <Cd>SCOR</Cd> <!-- Codigo -->
-        </CdOrPrtry>
-      <Issr> Vision Operations</Issr> <!-- Emisor de identificación de la parte generadora -->
-      </Tp>
-      <Ref>010806817183</Ref>
-    </CdtrRefInf>
-  </Strd>
-</RmtInf>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.008.001.02">
+    <CstmrDrctDbtInitn>
+        <GrpHdr>
+            <MsgId>PRE2018*****</MsgId>
+            <CreDtTm>2018-12-10T14:31:01</CreDtTm>
+            <NbOfTxs>2</NbOfTxs>
+            <CtrlSum>200.00</CtrlSum>
+            <InitgPty>
+                <Nm>Elm Enterprice</Nm>
+                <Id>
+                    <PrvtId>
+                        <Othr>
+                            <Id>TU_IDENTIFICADOR</Id>
+                        </Othr>
+                    </PrvtId>
+                </Id>
+            </InitgPty>
+        </GrpHdr>
+        <PmtInf>
+            <PmtInfId>ES****</PmtInfId>
+            <PmtMtd>DD</PmtMtd>
+            <BtchBookg>true</BtchBookg>
+            <NbOfTxs>1</NbOfTxs>
+            <CtrlSum>100.00</CtrlSum>
+            <PmtTpInf>
+                <SvcLvl>
+                    <Cd>SEPA</Cd>
+                </SvcLvl>
+                <LclInstrm>
+                    <Cd>CORE</Cd>
+                </LclInstrm>
+                <SeqTp>RCUR</SeqTp>
+            </PmtTpInf>
+            <ReqdColltnDt>2018-12-10</ReqdColltnDt>
+            <Cdtr>
+                <Nm>Elm Enterprice</Nm>
+            </Cdtr>
+            <CdtrAcct>
+                <Id>
+                    <IBAN>ES6000491500051234567892</IBAN>
+                </Id>
+            </CdtrAcct>
+            <CdtrAgt>
+                <FinInstnId>
+                    <BIC>BBVAESMMXXX</BIC>
+                </FinInstnId>
+            </CdtrAgt>
+            <CdtrSchmeId>
+                <Id>
+                    <PrvtId>
+                        <Othr>
+                            <Id>11223344A</Id>
+                            <SchmeNm>
+                                <Prtry>SEPA</Prtry>
+                            </SchmeNm>
+                        </Othr>
+                    </PrvtId>
+                </Id>
+            </CdtrSchmeId>
+            <DrctDbtTxInf>
+                <PmtId>
+                    <EndToEndId>2-*******</EndToEndId>
+                </PmtId>
+                <InstdAmt Ccy="EUR">100.00</InstdAmt>
+                <DrctDbtTx>
+                    <MndtRltdInf>
+                        <MndtId>41023</MndtId>
+                        <DtOfSgntr>2018-12-10</DtOfSgntr>
+                        <AmdmntInd>true</AmdmntInd>
+                        <AmdmntInfDtls>
+                            <OrgnlCdtrSchmeId>
+                                <Nm>Elm Enterprice</Nm>
+                            </OrgnlCdtrSchmeId>
+                        </AmdmntInfDtls>
+                    </MndtRltdInf>
+                </DrctDbtTx>
+                <DbtrAgt>
+                    <FinInstnId/>
+                </DbtrAgt>
+                <Dbtr>
+                    <Nm>Elm Ramis</Nm>
+                    <Id>
+                        <PrvtId>
+                            <Othr>
+                                <Id>11223344A</Id>
+                                <Issr>DNI</Issr>
+                            </Othr>
+                        </PrvtId>
+                    </Id>
+                </Dbtr>
+                <DbtrAcct>
+                    <Id>
+                        <IBAN>ES6000491500051234567890</IBAN>
+                    </Id>
+                </DbtrAcct>
+                <RmtInf>
+                    <Ustrd>000000001</Ustrd>
+                </RmtInf>
+            </DrctDbtTxInf>
+        </PmtInf>
+    </CstmrDrctDbtInitn>
+</Document>
