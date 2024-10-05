@@ -1,102 +1,26 @@
-<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.008.001.02">
-    <CstmrDrctDbtInitn>
-        <GrpHdr>
-            <MsgId>PRE2018*****</MsgId>
-            <CreDtTm>2018-12-10T14:31:01</CreDtTm>
-            <NbOfTxs>2</NbOfTxs>
-            <CtrlSum>200.00</CtrlSum>
-            <InitgPty>
-                <Nm>Elm Enterprice</Nm>
-                <Id>
-                    <PrvtId>
-                        <Othr>
-                            <Id>TU_IDENTIFICADOR</Id>
-                        </Othr>
-                    </PrvtId>
-                </Id>
-            </InitgPty>
-        </GrpHdr>
-        <PmtInf>
-            <PmtInfId>ES****</PmtInfId>
-            <PmtMtd>DD</PmtMtd>
-            <BtchBookg>true</BtchBookg>
-            <NbOfTxs>1</NbOfTxs>
-            <CtrlSum>100.00</CtrlSum>
-            <PmtTpInf>
-                <SvcLvl>
-                    <Cd>SEPA</Cd>
-                </SvcLvl>
-                <LclInstrm>
-                    <Cd>CORE</Cd>
-                </LclInstrm>
-                <SeqTp>RCUR</SeqTp>
-            </PmtTpInf>
-            <ReqdColltnDt>2018-12-10</ReqdColltnDt>
-            <Cdtr>
-                <Nm>Elm Enterprice</Nm>
-            </Cdtr>
-            <CdtrAcct>
-                <Id>
-                    <IBAN>ES6000491500051234567892</IBAN>
-                </Id>
-            </CdtrAcct>
-            <CdtrAgt>
-                <FinInstnId>
-                    <BIC>BBVAESMMXXX</BIC>
-                </FinInstnId>
-            </CdtrAgt>
-            <CdtrSchmeId>
-                <Id>
-                    <PrvtId>
-                        <Othr>
-                            <Id>11223344A</Id>
-                            <SchmeNm>
-                                <Prtry>SEPA</Prtry>
-                            </SchmeNm>
-                        </Othr>
-                    </PrvtId>
-                </Id>
-            </CdtrSchmeId>
-            <DrctDbtTxInf>
-                <PmtId>
-                    <EndToEndId>2-*******</EndToEndId>
-                </PmtId>
-                <InstdAmt Ccy="EUR">100.00</InstdAmt>
-                <DrctDbtTx>
-                    <MndtRltdInf>
-                        <MndtId>41023</MndtId>
-                        <DtOfSgntr>2018-12-10</DtOfSgntr>
-                        <AmdmntInd>true</AmdmntInd>
-                        <AmdmntInfDtls>
-                            <OrgnlCdtrSchmeId>
-                                <Nm>Elm Enterprice</Nm>
-                            </OrgnlCdtrSchmeId>
-                        </AmdmntInfDtls>
-                    </MndtRltdInf>
-                </DrctDbtTx>
-                <DbtrAgt>
-                    <FinInstnId/>
-                </DbtrAgt>
-                <Dbtr>
-                    <Nm>Elm Ramis</Nm>
-                    <Id>
-                        <PrvtId>
-                            <Othr>
-                                <Id>11223344A</Id>
-                                <Issr>DNI</Issr>
-                            </Othr>
-                        </PrvtId>
-                    </Id>
-                </Dbtr>
-                <DbtrAcct>
-                    <Id>
-                        <IBAN>ES6000491500051234567890</IBAN>
-                    </Id>
-                </DbtrAcct>
-                <RmtInf>
-                    <Ustrd>000000001</Ustrd>
-                </RmtInf>
-            </DrctDbtTxInf>
-        </PmtInf>
-    </CstmrDrctDbtInitn>
-</Document>
+# Proyecto Angular - Instrucciones de Instalación
+
+Este documento proporciona una guía paso a paso para clonar, instalar dependencias y ejecutar un proyecto Angular en otra máquina.
+
+## Requisitos previos
+
+Antes de comenzar, asegúrate de que tu sistema cumple con los siguientes requisitos:
+
+- **Node.js** (versión 12.x o superior) y **npm** (administrador de paquetes de Node.js).
+  - Puedes descargar Node.js y npm desde [aquí](https://nodejs.org/).
+  - Para verificar si están instalados, ejecuta los siguientes comandos en tu terminal:
+    ```bash
+    node -v
+    npm -v
+    ```
+- **Angular CLI** (Interfaz de Línea de Comandos de Angular) instalado globalmente:
+  - Si no lo tienes instalado, puedes hacerlo ejecutando:
+    ```bash
+    npm install -g @angular/cli
+    ```
+
+  - Si te salen errores en el proyecto angular despues de seguir estos pasos prueba lo siguiente:
+    ```bash
+    npm install
+    ```
+
