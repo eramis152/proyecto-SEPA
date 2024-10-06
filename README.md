@@ -33,7 +33,7 @@ Una vez clonado el repositorio en tu maquina, este documento proporciona una gu�
     ·Java Extension Pack. <br>
     ·Spring Boot Extension Pack. <br>
 
-  - Por ultima ejecutar el boton "Play" de arriba a la derecha del VSCode
+  - Por ultimo ejecutar el boton "Play" de arriba a la derecha del VSCode
 
 
 
