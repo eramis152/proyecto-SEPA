@@ -1,18 +1,18 @@
 <div class="contenedor">
 
-    <form action="">
+    <form action="" #form="ngForm" (ngSubmit)="onSubmit(form)">
       <h1>TRANSFERENCIA</h1>
       <hr>
       <h3 style="text-align: center;">DATOS PERSONALES</h3>
         <div class="form">
           <div class="input-group">
-            <input required="" type="text" name="text" autocomplete="off" class="input">
+            <input required="" type="text" name="text" autocomplete="off" class="input" id="name"  [(ngModel)]="transactionForm.name" required>
             <label class="user-label">Nombre</label>
             </div>
     
            
             <div class="input-group">
-              <input required="" type="text" name="text" autocomplete="off" class="input">
+              <input required="" type="text" name="text" autocomplete="off" class="input" [(ngModel)]="transactionForm.lastName" required>
               <label class="user-label">Apellidos</label>
             </div>
     
@@ -23,18 +23,18 @@
           <div class="form">
     
             <div class="input-group">
-              <input required="" type="text" name="text" autocomplete="off" class="input">
+              <input required="" type="text" name="text" autocomplete="off" class="input" [(ngModel)]="transactionForm.iban" required>
               <label class="user-label">IBAN</label>
               </div>
       
              
               <div class="input-group">
-                <input required="" type="text" name="text" autocomplete="off" class="input">
+                <input required="" type="text" name="text" autocomplete="off" class="input" [(ngModel)]="transactionForm.fechaCad" required>
                 <label class="user-label">Fecha Cad.</label>
               </div>
 
               <div class="input-group">
-                <input required="" type="text" name="text" autocomplete="off" class="input">
+                <input required="" type="password" name="text" maxlength="3" autocomplete="off" class="input" [(ngModel)]="transactionForm.cvv" required>
                 <label class="user-label">CVV</label>
               </div>
     
@@ -44,7 +44,7 @@
 
           <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
     
-            <button class="ui-btn">
+            <button class="ui-btn" type="submit">
               <span>
                 ENVIAR 
               </span>
