@@ -29,10 +29,12 @@ Una vez clonado el repositorio en tu maquina, este documento proporciona una gu�
     ```
 ### Spring Boot
 - Como ejecutar y que extensiones descargar en VSCode:
+  - El proyecto esta hecho con la version de Java 17, si usas otra version el programa no funcionara al ejecutarlo.
+
   - Extensiones: <br>
     ·Java Extension Pack. <br>
     ·Spring Boot Extension Pack. <br>
-
+ 
   - Por ultimo ejecutar el boton "Play" de arriba a la derecha del VSCode
 
 
