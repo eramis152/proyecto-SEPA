@@ -29,4 +29,13 @@ Antes de comenzar, asegúrate de que tu sistema cumple con los siguientes requis
     ng serve
     ```
 
+- **Spring Boot** Como ejecutar y que extensiones descargar en VSCode:
+  - Extensiones:
+    ·Java Extension Pack. <br>
+    ·Spring Boot Extension Pack. <br>
+
+  - Por ultima ejecutar el boton "Play" de arriba a la derecha del VSCode
+
+
+
 
