@@ -4,8 +4,7 @@ Una vez clonado el repositorio en tu maquina, este documento proporciona una gu�
 
 ## Requisitos previos
 
-Antes de comenzar, asegúrate de que tu sistema cumple con los siguientes requisitos:
-
+### Angular
 - **Node.js** (versión 12.x o superior) y **npm** (administrador de paquetes de Node.js).
   - Puedes descargar Node.js y npm desde [aquí](https://nodejs.org/).
   - Para verificar si están instalados, ejecuta los siguientes comandos en tu terminal:
@@ -28,8 +27,8 @@ Antes de comenzar, asegúrate de que tu sistema cumple con los siguientes requis
     ```bash
     ng serve
     ```
-
-- **Spring Boot** Como ejecutar y que extensiones descargar en VSCode:
+### Spring Boot
+- Como ejecutar y que extensiones descargar en VSCode:
   - Extensiones: <br>
     ·Java Extension Pack. <br>
     ·Spring Boot Extension Pack. <br>
