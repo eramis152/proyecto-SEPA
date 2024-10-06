@@ -30,7 +30,7 @@ Antes de comenzar, asegúrate de que tu sistema cumple con los siguientes requis
     ```
 
 - **Spring Boot** Como ejecutar y que extensiones descargar en VSCode:
-  - Extensiones:
+  - Extensiones: <br>
     ·Java Extension Pack. <br>
     ·Spring Boot Extension Pack. <br>
 
