@@ -22,6 +22,12 @@ export class AppComponent {
   }
 
   onSubmit(_t6: NgForm) {
-    console.log(this.transactionForm);
+
+    if(this.transactionForm.name == undefined || this.transactionForm.lastName == undefined || this.transactionForm.iban == undefined || this.transactionForm.fechaCad == undefined || this.transactionForm.cvv == undefined){
+      alert("Rellena todos los campos");
+    }else{
+      console.log(this.transactionForm);
+    }
+
     }
 }
