@@ -6,12 +6,15 @@ Una vez clonado el repositorio en tu maquina, este documento proporciona una gu�
 
 ### Angular
 - **Node.js** (versión 12.x o superior) y **npm** (administrador de paquetes de Node.js).
+  
   - Puedes descargar Node.js y npm desde [aquí](https://nodejs.org/).
+    
   - Para verificar si están instalados, ejecuta los siguientes comandos en tu terminal:
     ```bash
     node -v
     npm -v
     ```
+    
 - **Angular CLI** (Interfaz de Línea de Comandos de Angular) instalado globalmente:
   - Si no lo tienes instalado, puedes hacerlo ejecutando:
     ```bash
