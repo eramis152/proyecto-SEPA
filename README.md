@@ -1,6 +1,6 @@
 # Proyecto Angular - Instrucciones de Instalación
 
-Este documento proporciona una guía paso a paso para clonar, instalar dependencias y ejecutar un proyecto Angular en otra máquina.
+Una vez clonado el repositorio en tu maquina, este documento proporciona una guía paso a paso para instalar dependencias y ejecutar un proyecto Angular y Spring Boot en tu maquina.
 
 ## Requisitos previos
 
