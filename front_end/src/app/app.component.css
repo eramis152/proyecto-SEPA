@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ajusta a la altura completa de la pantalla */
+    height: 105vh; /* Ajusta a la altura completa de la pantalla */
     font-family: "Roboto", sans-serif;
 }
 form{

@@ -46,19 +46,84 @@
     <h3 style="text-align: center;">DATOS DE TU CUENTA</h3>
     <div class="form">
       <div class="input-group">
-        <input type="text" name="iban" autocomplete="off" class="input" [(ngModel)]="transactionForm.iban" required #iban="ngModel">
+        <input type="text" name="iban" autocomplete="off" class="input" minlength="15" maxlength="34" [(ngModel)]="transactionForm.iban" required #iban="ngModel">
         <label class="user-label">IBAN</label>
+        <div *ngIf="iban.invalid && (iban.dirty || iban.touched)" class="error-message">
+            <div *ngIf="iban.errors?.['required']" style="display: flex; align-items: center; gap: 5px; margin-block-start: 0em; margin-block-end: 0em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-alert-triangle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
+                </svg>
+                <p>Ingresa el IBAN.</p>
+            </div>
+            <div *ngIf="iban.errors?.['minlength']" class="error-message" style="display: flex; align-items: center; gap: 5px; margin-block-start: 0em; margin-block-end: 0em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-alert-triangle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
+                </svg>
+                <p>El IBAN debe tener al menos <br> 15 caracteres.</p>
+            </div>
+            <div *ngIf="iban.errors?.['maxlength']" class="error-message" style="display: flex; align-items: center; gap: 5px; margin-block-start: 0em; margin-block-end: 0em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-alert-triangle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
+                </svg>
+                <p>El IBAN no puede tener más de 34 caracteres.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="input-group">
+      <input type="text" name="fechaCad" autocomplete="off" class="input" [(ngModel)]="transactionForm.fechaCad" required pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" #fechaCad="ngModel">
+      <label class="user-label">Fecha Cad.</label>
+      <div *ngIf="fechaCad.invalid && (fechaCad.dirty || fechaCad.touched)" class="error-message">
+          <div *ngIf="fechaCad.errors?.['required']" style="display: flex; align-items: center; gap: 5px; margin-block-start: 0em; margin-block-end: 0em;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-alert-triangle">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
+              </svg>
+              <p>Ingresa la fecha de caducidad.</p>
+          </div>
+          <div *ngIf="fechaCad.errors?.['pattern']" class="error-message" style="display: flex; align-items: center; gap: 5px; margin-block-start: 0em; margin-block-end: 0em;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-alert-triangle">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
+              </svg>
+              <p>Formato inválido. Usa MM/AA.</p>
+          </div>
       </div>
+  </div>
+  
 
       <div class="input-group">
-        <input type="text" name="fechaCad" autocomplete="off" class="input" [(ngModel)]="transactionForm.fechaCad" required #fechaCad="ngModel">
-        <label class="user-label">Fecha Cad.</label>
-      </div>
-
-      <div class="input-group">
-        <input type="password" name="cvv" maxlength="3" autocomplete="off" class="input" [(ngModel)]="transactionForm.cvv" required #cvv="ngModel">
+        <input type="password" name="cvv" maxlength="3" minlength="3" autocomplete="off" class="input" [(ngModel)]="transactionForm.cvv" required #cvv="ngModel">
         <label class="user-label">CVV</label>
-      </div>
+        <div *ngIf="cvv.invalid && (cvv.dirty || cvv.touched)" class="error-message">
+            <div *ngIf="cvv.errors?.['required']" style="display: flex; align-items: center; gap: 5px; margin-block-start: 0em; margin-block-end: 0em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-alert-triangle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
+                </svg>
+                <p>Ingresa el CVV.</p>
+            </div>
+            <div *ngIf="cvv.errors?.['minlength']" class="error-message" style="display: flex; align-items: center; gap: 5px; margin-block-start: 0em; margin-block-end: 0em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-alert-triangle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
+                </svg>
+                <p>El CVV debe tener exactamente 3 dígitos.</p>
+            </div>
+            <div *ngIf="cvv.errors?.['maxlength']" class="error-message" style="display: flex; align-items: center; gap: 5px; margin-block-start: 0em; margin-block-end: 0em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-alert-triangle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
+                </svg>
+                <p>El CVV no puede tener más de 3 dígitos.</p>
+            </div>
+        </div>
+    </div>
+    
     </div>
 
     <hr>
