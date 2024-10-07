@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class TransactionService {
 
 
-  private url: string =  'http://localhost:4200/transaction';  // URL base
+  private url: string =  'http://localhost:8080/transaction';  // URL base
 
   constructor(private http: HttpClient) { }
 
