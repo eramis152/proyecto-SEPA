@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
 import Swal from 'sweetalert2'
+import { TransactionService } from './services/transaction.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,10 @@ export class AppComponent implements OnInit {
   currentDate!: string;  // Variable para guardar la siguiente fecha
   transactionForm: transaction;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private service: TransactionService
+  ) {
     this.transactionForm = new transaction();
   }
 
@@ -50,19 +54,22 @@ export class AppComponent implements OnInit {
 
   onSubmit(_t6: NgForm) {
     this.transactionForm.date = this.currentDate;
-    console.log(this.currentDate);
 
     if (_t6.valid) {
+
+      this.service.emitTransaction(this.transactionForm).subscribe( response =>{
+        console.log(response);
+      })
+
       Swal.fire({
         icon: "success",
         title: "¡Transacción realizada!",
         showConfirmButton: false,
         timer: 1500
       });
-
-      console.log(this.transactionForm);
       this.transactionForm = new transaction();
       _t6.reset();
+      
     }
   }
 }
