@@ -6,7 +6,7 @@ export class transaction {
     nameClient!: string;
     ibanClient!: number;
     bicClient!: string;
-    import!: string;
-    date!: Date;
+    amount!: string;
+    date!: string;
 
 }

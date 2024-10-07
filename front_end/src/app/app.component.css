@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 105vh; /* Ajusta a la altura completa de la pantalla */
+    height: 140vh; /* Ajusta a la altura completa de la pantalla */
     font-family: "Roboto", sans-serif;
 }
 
@@ -70,7 +70,16 @@ h1{
     outline: none;
     border: 1.5px solid #1a73e8;
    }
-   
+   #inputDinero:focus{
+    outline: none;
+    border: 1.5px solid #3ce81a;
+   }
+   #inputDinero:focus ~ label, input:valid ~ label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: rgb(255, 255, 255);
+    padding: 0 .2em;
+    color: #0ff303;
+   }
    .input:focus ~ label, input:valid ~ label {
     transform: translateY(-50%) scale(0.8);
     background-color: rgb(255, 255, 255);
