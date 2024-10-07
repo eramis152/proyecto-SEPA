@@ -42,8 +42,7 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
-                "id='" + id + '\'' +
+        return "id=" + id +
                 ", name company=" + nameCompany +
                 ", iban company=" + ibanCompany +
                 ", bic company=" + bicCompany +
@@ -51,7 +50,6 @@ public class Transaction {
                 ", iban client=" + ibanClient +
                 ", bic client=" + bicClient +
                 ", cantidad=" + amount +'€' +
-                ", fecha='" + date + '\'' +
-                '}';
+                ", fecha='" + date + '\'';
     }
 }

@@ -22,6 +22,15 @@ public class TransactionController {
 
         // Guardar la transacción en un archivo
         saveTransactionToFile(transaction);
+        System.out.println("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡NUEVA TRANSACCION!!!!!!!!!!!!!!!!");
+        System.out.println("Nombre compañia: " + transaction.getNameCompany());
+        System.out.println("IBAN empresa: "+transaction.getIbanCompany());
+        System.out.println("BIC Empresa: "+transaction.getNameCompany());
+        System.out.println("Nombre cliente: " +transaction.getNameClient());
+        System.out.println("IBAN cliente:" +transaction.getIbanClient());
+        System.out.println("BIC cliente: " +transaction.getBicClient());
+        System.out.println("Dinero: " +transaction.getAmount());
+        System.out.println("Fecha: " +transaction.getDate());
         return transaction;
     }
 
