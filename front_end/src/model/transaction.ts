@@ -1,7 +1,12 @@
 export class transaction {
-    name!: string;
-    lastName!: string;
-    iban!: number;
-    fechaCad!: string;
-    cvv!: number;
+    id!: number;
+    nameCompany!: string;
+    ibanCompany!: number;
+    bicCompany!: string;
+    nameClient!: string;
+    ibanClient!: number;
+    bicClient!: string;
+    import!: string;
+    date!: Date;
+
 }
