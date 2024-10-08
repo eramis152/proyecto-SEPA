@@ -9,7 +9,7 @@ Una vez clonado el repositorio en tu maquina, este documento proporciona una gu�
   
   - Puedes descargar Node.js y npm desde [aquí](https://nodejs.org/).
     
-  - Para verificar si están instalados, ejecuta los siguientes comandos en tu terminal:
+  - Para verificar si están instalados, ejecuta los siguientes comandos en el PowerShell:
     ```bash
     node -v
     npm -v
