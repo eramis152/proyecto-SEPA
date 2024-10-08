@@ -21,7 +21,7 @@ Una vez clonado el repositorio en tu maquina, este documento proporciona una gu√
     npm install -g @angular/cli
     ```
 
-  - Si te salen errores en el proyecto angular despues de seguir estos pasos prueba lo siguiente:
+  - Si te salen errores en el proyecto angular despues de seguir estos pasos prueba lo siguiente dentro de la carpeta front_end:
     ```bash
     npm install
     ```
