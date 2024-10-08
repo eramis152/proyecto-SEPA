@@ -38,7 +38,7 @@ Una vez clonado el repositorio en tu maquina, este documento proporciona una gu�
     ·Java Extension Pack. <br>
     ·Spring Boot Extension Pack. <br>
  
-  - Por ultimo abre la extension de Spring Boot Dashboard y le das al play
+  - Por ultimo abre la extension de Spring Boot Dashboard y le das al play o "Run"
 
 
 
