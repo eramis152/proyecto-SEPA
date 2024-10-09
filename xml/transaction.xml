@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
+    <CstmrCdtTrfInitn>
+        <GrpHdr>
+            <MsgId>123456</MsgId>
+            <CreDtTm>10/10/2024</CreDtTm>
+            <NbOfTxs>1</NbOfTxs>
+            <CtrlSum>150</CtrlSum>
+            <InitgPty>
+                <Nm>Perito Perital Mamapinga</Nm>
+            </InitgPty>
+        </GrpHdr>
+        <PmtInf>
+            <PmtInfId>PmtInf123</PmtInfId>
+            <PmtMtd>TRF</PmtMtd>
+            <ReqdExctnDt>10/10/2024</ReqdExctnDt>
+            <Dbtr>
+                <Nm>Nicolas </Nm>
+                <DbtrAcct>
+                    <Id>
+                        <IBAN>ES21 1465 0100 72 2030871111</IBAN>
+                    </Id>
+                </DbtrAcct>
+                <DbtrAgt>
+                    <FinInstnId>
+                        <BIC>INGDESMM222</BIC>
+                    </FinInstnId>
+                </DbtrAgt>
+            </Dbtr>
+            <Cdtr>
+                <Nm>Perito Perital Mamapinga</Nm>
+                <CdtrAcct>
+                    <Id>
+                        <IBAN>ES21 1465 0100 72 2030876293</IBAN>
+                    </Id>
+                </CdtrAcct>
+                <CdtrAgt>
+                    <FinInstnId>
+                        <BIC>INGDESMM111</BIC>
+                    </FinInstnId>
+                </CdtrAgt>
+            </Cdtr>
+            <CdtTrfTxInf>
+                <PmtId>
+                    <EndToEndId>ETOE123456</EndToEndId>
+                </PmtId>
+                <Amt>
+                    <InstdAmt Ccy="EUR">150</InstdAmt>
+                </Amt>
+            </CdtTrfTxInf>
+        </PmtInf>
+    </CstmrCdtTrfInitn>
+</Document>

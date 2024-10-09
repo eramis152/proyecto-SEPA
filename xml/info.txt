@@ -1,0 +1,1 @@
+id=null, name company=Perito Perital Mamapinga, iban company=ES21 1465 0100 72 2030876293, bic company=INGDESMM111, name client=Nicolas , iban client=ES21 1465 0100 72 2030871111, bic client=INGDESMM222, cantidad=150€, fecha='10/10/2024'
