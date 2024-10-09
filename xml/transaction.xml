@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
+    <CstmrCdtTrfInitn>
+        <GrpHdr>
+            <MsgId>123456</MsgId>
+            <CreDtTm>10/10/2024</CreDtTm>
+            <NbOfTxs>1</NbOfTxs>
+            <CtrlSum>4000</CtrlSum>
+            <InitgPty>
+                <Nm>Elm SL</Nm>
+            </InitgPty>
+        </GrpHdr>
+        <PmtInf>
+            <PmtInfId>PmtInf123</PmtInfId>
+            <PmtMtd>TRF</PmtMtd>
+            <ReqdExctnDt>10/10/2024</ReqdExctnDt>
+            <Dbtr>
+                <Nm>Nico Viscio</Nm>
+                <DbtrAcct>
+                    <Id>
+                        <IBAN>ES21 1465 0100 72 2030871111</IBAN>
+                    </Id>
+                </DbtrAcct>
+                <DbtrAgt>
+                    <FinInstnId>
+                        <BIC>INGDESMMXXX</BIC>
+                    </FinInstnId>
+                </DbtrAgt>
+            </Dbtr>
+            <Cdtr>
+                <Nm>Elm SL</Nm>
+                <CdtrAcct>
+                    <Id>
+                        <IBAN>ES21 1465 0100 72 2030876293</IBAN>
+                    </Id>
+                </CdtrAcct>
+                <CdtrAgt>
+                    <FinInstnId>
+                        <BIC>INGDESMMXXX</BIC>
+                    </FinInstnId>
+                </CdtrAgt>
+            </Cdtr>
+            <CdtTrfTxInf>
+                <PmtId>
+                    <EndToEndId>ETOE123456</EndToEndId>
+                </PmtId>
+                <Amt>
+                    <InstdAmt Ccy="EUR">4000</InstdAmt>
+                </Amt>
+            </CdtTrfTxInf>
+        </PmtInf>
+    </CstmrCdtTrfInitn>
+</Document>
