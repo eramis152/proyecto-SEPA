@@ -134,7 +134,7 @@ public class XmlGenerator {
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("..\\xml\\info.xml"));
+            StreamResult result = new StreamResult(new File("..\\..\\..\\..\\..\\xml\\info.xml"));
             transformer.transform(source, result);
     
             System.out.println("Archivo XML generado correctamente!");

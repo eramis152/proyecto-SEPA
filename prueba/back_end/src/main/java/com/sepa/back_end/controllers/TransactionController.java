@@ -40,7 +40,7 @@ public class TransactionController {
     }
 
     private void saveTransactionToFile(Transaction transaction) {
-        String filePath = "nada";  // Especifica el archivo en Documentos
+        String filePath = "..\\..\\..\\..\\..\\xml\\info.xml";  // Especifica el archivo en Documentos
     
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) { // 'true' para añadir al archivo
             writer.write(transaction.toString()); // Guarda la representación legible de la transacción
