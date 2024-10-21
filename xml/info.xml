@@ -2,11 +2,11 @@
     <CstmrDrctDbtInitn>
         <GrpHdr>
             <MsgId>PRE2018*****</MsgId>
-            <CreDtTm>2018-12-10T14:31:01</CreDtTm>
-            <NbOfTxs>2</NbOfTxs> <!-- Número de transacciones como cadena -->
-            <CtrlSum>200.00</CtrlSum> <!-- Suma de control como cadena -->
+            <CreDtTm>2024-10-18T14:30:00</CreDtTm>
+            <NbOfTxs>1</NbOfTxs>
+            <CtrlSum>333</CtrlSum>
             <InitgPty>
-                <Nm>Elm Enterprice</Nm>
+                <Nm>333333333</Nm>
                 <Id>
                     <PrvtId>
                         <Othr>
@@ -21,7 +21,7 @@
             <PmtMtd>DD</PmtMtd>
             <BtchBookg>true</BtchBookg>
             <NbOfTxs>1</NbOfTxs>
-            <CtrlSum>100.00</CtrlSum> <!-- Suma de control de pago como cadena -->
+            <CtrlSum>333</CtrlSum>
             <PmtTpInf>
                 <SvcLvl>
                     <Cd>SEPA</Cd>
@@ -33,7 +33,7 @@
             </PmtTpInf>
             <ReqdColltnDt>2018-12-10</ReqdColltnDt>
             <Cdtr>
-                <Nm>Elm Enterprice</Nm>
+                <Nm>333333333</Nm>
             </Cdtr>
             <CdtrAcct>
                 <Id>
@@ -61,7 +61,7 @@
                 <PmtId>
                     <EndToEndId>2-*******</EndToEndId>
                 </PmtId>
-                <InstdAmt Ccy="EUR">100.00</InstdAmt> <!-- Cantidad fija con formato correcto -->
+                <InstdAmt Ccy="EUR">100.00</InstdAmt>
                 <DrctDbtTx>
                     <MndtRltdInf>
                         <MndtId>41023</MndtId>
@@ -69,7 +69,7 @@
                         <AmdmntInd>true</AmdmntInd>
                         <AmdmntInfDtls>
                             <OrgnlCdtrSchmeId>
-                                <Nm>Elm Enterprice</Nm>
+                                <Nm>333333333</Nm>
                             </OrgnlCdtrSchmeId>
                         </AmdmntInfDtls>
                     </MndtRltdInf>
@@ -78,7 +78,7 @@
                     <FinInstnId/>
                 </DbtrAgt>
                 <Dbtr>
-                    <Nm>Elm Ramis</Nm>
+                    <Nm>333333333333</Nm>
                     <Id>
                         <PrvtId>
                             <Othr>

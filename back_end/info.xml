@@ -3,40 +3,40 @@
     <CstmrCdtTrfInitn>
         <GrpHdr>
             <MsgId>123456</MsgId>
-            <CreDtTm>10/10/2024</CreDtTm>
+            <CreDtTm>17/10/2024</CreDtTm>
             <NbOfTxs>1</NbOfTxs>
-            <CtrlSum>4000</CtrlSum>
+            <CtrlSum>222</CtrlSum>
             <InitgPty>
-                <Nm>Elm SL</Nm>
+                <Nm>44444444444444444444444444444444</Nm>
             </InitgPty>
         </GrpHdr>
         <PmtInf>
             <PmtInfId>PmtInf123</PmtInfId>
             <PmtMtd>TRF</PmtMtd>
-            <ReqdExctnDt>10/10/2024</ReqdExctnDt>
+            <ReqdExctnDt>17/10/2024</ReqdExctnDt>
             <Dbtr>
-                <Nm>Nico Viscio</Nm>
+                <Nm>4444444444444444444444444444444</Nm>
                 <DbtrAcct>
                     <Id>
-                        <IBAN>ES21 1465 0100 72 2030871111</IBAN>
+                        <IBAN>444444444444444444</IBAN>
                     </Id>
                 </DbtrAcct>
                 <DbtrAgt>
                     <FinInstnId>
-                        <BIC>INGDESMMXXX</BIC>
+                        <BIC>44444444444</BIC>
                     </FinInstnId>
                 </DbtrAgt>
             </Dbtr>
             <Cdtr>
-                <Nm>Elm SL</Nm>
+                <Nm>44444444444444444444444444444444</Nm>
                 <CdtrAcct>
                     <Id>
-                        <IBAN>ES21 1465 0100 72 2030876293</IBAN>
+                        <IBAN>4444444444444444444444444444444444</IBAN>
                     </Id>
                 </CdtrAcct>
                 <CdtrAgt>
                     <FinInstnId>
-                        <BIC>INGDESMMXXX</BIC>
+                        <BIC>44444444444</BIC>
                     </FinInstnId>
                 </CdtrAgt>
             </Cdtr>
@@ -45,7 +45,7 @@
                     <EndToEndId>ETOE123456</EndToEndId>
                 </PmtId>
                 <Amt>
-                    <InstdAmt Ccy="EUR">4000</InstdAmt>
+                    <InstdAmt Ccy="EUR">222</InstdAmt>
                 </Amt>
             </CdtTrfTxInf>
         </PmtInf>
