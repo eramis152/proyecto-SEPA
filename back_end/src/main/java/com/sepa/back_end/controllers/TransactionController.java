@@ -34,7 +34,8 @@ public class TransactionController {
         System.out.println("IBAN cliente: " + transaction.getIbanClient());
         System.out.println("BIC cliente: " + transaction.getBicClient());
         System.out.println("Dinero: " + transaction.getAmount());
-        System.out.println("Fecha: " + transaction.getDate());
+        System.out.println("Fecha: " + transaction.getDateV1());
+        System.out.println("Fecha: " + transaction.getDateV2());
         
         return transaction;
     }

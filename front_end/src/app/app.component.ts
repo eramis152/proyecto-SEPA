@@ -17,7 +17,8 @@ export class AppComponent implements OnInit {
 
   title = 'front_end';
 
-  currentDate!: string;  // Variable para guardar la siguiente fecha
+  currentDateV1!: string;  // Variable para guardar la siguiente fecha
+  currentDateV2!: string;
   transactionForm: transaction;
 
   constructor(
@@ -30,33 +31,40 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     const fechaActual = new Date();
 
-    // Guardar la siguiente fecha en la variable nextDate
-    this.currentDate = this.formatDate(this.addDays(fechaActual, 1));
-
-    console.log('Fecha Actual:', this.formatDate(fechaActual));
+    const fechaV1 = this.convertirFecha(fechaActual);
+    const hour = this.unirFechaHora(fechaActual);
+    this.currentDateV1 = fechaV1;
+    const joinDateHour = [fechaV1, hour.trim()];
+    const fechaV2 = joinDateHour.join('T');
+    this.currentDateV2 = fechaV2;
 
   }
 
-  // Función para agregar días a una fecha
-  addDays(date: Date, days: number): Date {
-    const result = new Date(date);
-    result.setDate(result.getDate() + days);
-    return result;
+  convertirFecha(fechaActual: Date): string{
+      const dateString = new Date(fechaActual).toLocaleString();
+      const split = dateString.split(',');
+      const dateConv= split[0];
+      const dateConvReserse = dateConv.split('/').reverse().join('/');
+
+      return dateConvReserse;
   }
 
-  // Función para formatear la fecha en DD/MM/YYYY
-  formatDate(date: Date): string {
-    const day = ('0' + date.getDate()).slice(-2);
-    const month = ('0' + (date.getMonth() + 1)).slice(-2);
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
-  }
+  unirFechaHora(fechaActual: Date): string{
+    const dateString = new Date(fechaActual).toLocaleString();
+    const split = dateString.split(',');
+    const hour= split[1];
+
+
+    return hour;
+}
+
 
   onSubmit(_t6: NgForm) {
-    this.transactionForm.date = this.currentDate;
+    this.transactionForm.dateV1 = this.currentDateV1;
+    this.transactionForm.dateV2 = this.currentDateV2;
 
     if (_t6.valid) {
-
+      console.log(this.transactionForm);
       this.service.emitTransaction(this.transactionForm).subscribe( response =>{
         console.log(response);
       })
@@ -69,7 +77,7 @@ export class AppComponent implements OnInit {
       });
       this.transactionForm = new transaction();
       _t6.reset();
-      
+
     }
   }
 }

@@ -38,7 +38,10 @@ public class Transaction {
     String amount;
 
     @Getter @Setter
-    String date;
+    String dateV1;
+
+    @Getter @Setter
+    String dateV2;
 
     @Override
     public String toString() {
@@ -50,6 +53,6 @@ public class Transaction {
                 ", iban client=" + ibanClient +
                 ", bic client=" + bicClient +
                 ", cantidad=" + amount +'€' +
-                ", fecha='" + date + '\'';
+                ", fecha='" + dateV1 +' '+ dateV2 + '\'';
     }
 }

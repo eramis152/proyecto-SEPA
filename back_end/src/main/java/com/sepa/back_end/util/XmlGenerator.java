@@ -46,7 +46,7 @@ public class XmlGenerator {
     
             // Usar los datos de la transacción
             createElement(doc, grpHdr, "MsgId", "123456"); // Cambiar según tus necesidades
-            createElement(doc, grpHdr, "CreDtTm", transaction.getDate()); // Utilizar la fecha de la transacción
+            createElement(doc, grpHdr, "CreDtTm", transaction.getDateV1()); // Utilizar la fecha de la transacción
             createElement(doc, grpHdr, "NbOfTxs", "1"); // Solo un pago
             createElement(doc, grpHdr, "CtrlSum", String.valueOf(transaction.getAmount())); // Utilizar el monto de la transacción
     
@@ -62,7 +62,7 @@ public class XmlGenerator {
             // Usar los datos de la transacción
             createElement(doc, pmtInf, "PmtInfId", "PmtInf123"); // ID de información de pago
             createElement(doc, pmtInf, "PmtMtd", "TRF"); // Método de pago
-            createElement(doc, pmtInf, "ReqdExctnDt", transaction.getDate()); // Fecha de ejecución requerida
+            createElement(doc, pmtInf, "ReqdExctnDt", transaction.getDateV1()); // Fecha de ejecución requerida
     
             // Crear el nodo <Dbtr> dentro de <PmtInf>
             Element dbtr = doc.createElement("Dbtr");
