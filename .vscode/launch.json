@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "com.sepa.back_end.util.test",
+            "projectName": "com.sepa-back_end"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-BackEndApplication<back_end>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -19,7 +26,8 @@
             "mainClass": "com.sepa.back_end.BackEndApplication",
             "projectName": "com.sepa-back_end",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=52052 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=com.sepa-back_end"
         }
     ]
 }
