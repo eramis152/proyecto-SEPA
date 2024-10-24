@@ -2,11 +2,11 @@
     <CstmrDrctDbtInitn>
         <GrpHdr>
             <MsgId>PRE2018*****</MsgId>
-            <CreDtTm>2024-10-18T14:30:00</CreDtTm>
+            <CreDtTm>2024/10/24T15:53:33</CreDtTm>
             <NbOfTxs>1</NbOfTxs>
-            <CtrlSum>333</CtrlSum>
+            <CtrlSum>123</CtrlSum>
             <InitgPty>
-                <Nm>333333333</Nm>
+                <Nm>1111111111111111</Nm>
                 <Id>
                     <PrvtId>
                         <Othr>
@@ -21,7 +21,7 @@
             <PmtMtd>DD</PmtMtd>
             <BtchBookg>true</BtchBookg>
             <NbOfTxs>1</NbOfTxs>
-            <CtrlSum>333</CtrlSum>
+            <CtrlSum>123</CtrlSum>
             <PmtTpInf>
                 <SvcLvl>
                     <Cd>SEPA</Cd>
@@ -33,16 +33,16 @@
             </PmtTpInf>
             <ReqdColltnDt>2018-12-10</ReqdColltnDt>
             <Cdtr>
-                <Nm>333333333</Nm>
+                <Nm>1111111111111111</Nm>
             </Cdtr>
             <CdtrAcct>
                 <Id>
-                    <IBAN>ES6000491500051234567892</IBAN>
+                    <IBAN>11111111111111111111111111</IBAN>
                 </Id>
             </CdtrAcct>
             <CdtrAgt>
                 <FinInstnId>
-                    <BIC>BBVAESMMXXX</BIC>
+                    <BIC>11111111111</BIC>
                 </FinInstnId>
             </CdtrAgt>
             <CdtrSchmeId>
@@ -65,11 +65,11 @@
                 <DrctDbtTx>
                     <MndtRltdInf>
                         <MndtId>41023</MndtId>
-                        <DtOfSgntr>2018-12-10</DtOfSgntr>
+                        <DtOfSgntr>2024/10/24</DtOfSgntr>
                         <AmdmntInd>true</AmdmntInd>
                         <AmdmntInfDtls>
                             <OrgnlCdtrSchmeId>
-                                <Nm>333333333</Nm>
+                                <Nm>1111111111111111</Nm>
                             </OrgnlCdtrSchmeId>
                         </AmdmntInfDtls>
                     </MndtRltdInf>
@@ -78,7 +78,7 @@
                     <FinInstnId/>
                 </DbtrAgt>
                 <Dbtr>
-                    <Nm>333333333333</Nm>
+                    <Nm>111111111111111111111</Nm>
                     <Id>
                         <PrvtId>
                             <Othr>
@@ -90,7 +90,7 @@
                 </Dbtr>
                 <DbtrAcct>
                     <Id>
-                        <IBAN>ES6000491500051234567890</IBAN>
+                        <IBAN>11111111111111111111111</IBAN>
                     </Id>
                 </DbtrAcct>
                 <RmtInf>

@@ -2,35 +2,13 @@
     "configurations": [
         {
             "type": "java",
-            "name": "XmlGenerator",
-            "request": "launch",
-            "mainClass": "com.sepa.back_end.util.XmlGenerator",
-            "projectName": "back_end"
-        },
-        {
-            "type": "java",
-            "name": "XmlGenerator2",
-            "request": "launch",
-            "mainClass": "com.sepa.back_end.util.XmlGenerator2",
-            "projectName": "back_end"
-        },
-        {
-            "type": "java",
-            "name": "IncrementId",
-            "request": "launch",
-            "mainClass": "com.example.IncrementId",
-            "projectName": "back_end"
-        },
-        {
-            "type": "java",
             "name": "Spring Boot-BackEndApplication<back_end>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.sepa.back_end.BackEndApplication",
             "projectName": "back_end",
             "args": "",
-            "envFile": "${workspaceFolder}/.env",
-            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=64653 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=back_end"
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
