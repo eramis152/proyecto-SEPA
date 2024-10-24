@@ -69,7 +69,7 @@ public class XmlGenerator {
         String fechaFirma = DateV1;
 
         // Llamada a la función con los valores personalizados
-        crearArchivoXMLSEPA("..\\xml\\info.xml", msgId, creDtTm, nbOfTxs, ctrlSum, nombreIniciador, identificador,
+        crearArchivoXMLSEPA(".\\xml\\info.xml", msgId, creDtTm, nbOfTxs, ctrlSum, nombreIniciador, identificador,
                 pmtInfId, ctrlSumPmtInf, ibanCreditor, bic, nombreDebtor, ibanDebtor, mandatoId, fechaFirma);
     }
 

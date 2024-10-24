@@ -30,6 +30,7 @@ Una vez clonado el repositorio en tu maquina, este documento proporciona una gu√
     ```bash
     ng serve
     ```
+    cd src\main\java\com\sepa\front_end
 ### Spring Boot
 - Como ejecutar y que extensiones descargar en VSCode:
   - El proyecto esta hecho con la version de Java 17, si usas otra version el programa no funcionara al ejecutarlo.
