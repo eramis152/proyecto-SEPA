@@ -2,6 +2,9 @@ package com.sepa.back_end.util;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 import com.sepa.back_end.entities.Transaction;
 
@@ -13,11 +16,45 @@ public class XmlGenerator {
         this.transaction = transaction;
     }
 
+    public static String replaceSlashWithDash(String input) {
+        return input.replace('/', '-');
+    }
+
+    public static int updateNumberInFile(String filePath) throws IOException {
+    String content = new String(Files.readAllBytes(Paths.get(filePath)));
+
+    int number = Integer.parseInt(content.trim());
+    number += 1;
+    Files.write(Paths.get(filePath), String.valueOf(number).getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
+    return number;
+    }
+
+    public static String modifyString(int number) {
+        String baseString = "PRE201800000";
+        
+        String numberStr = String.valueOf(number);
+
+        String paddedNumber = String.format("%06d", number);
+
+        String modifiedString = baseString.substring(0, baseString.length() - 6) + paddedNumber;
+
+        return modifiedString;
+    }
+
     public void generateXML() {
+        try{
+            int factureID = updateNumberInFile("numero.txt");
+        } catch (IOException e) {
+            System.out.println("Error al guardar la base: " + e.getMessage());
+        }
+        
+
+        String DateV2 = replaceSlashWithDash(transaction.getDateV2());
+        String DateV1 = replaceSlashWithDash(transaction.getDateV1());
 
         // Variables dinámicas para los valores que deben ser personalizados
         String msgId = "PRE2018*****";
-        String creDtTm = transaction.getDateV2(); // Acceso a la fecha desde la transacción
+        String creDtTm = DateV2; // Acceso a la fecha desde la transacción
         String nbOfTxs = "1";
         String ctrlSum = transaction.getAmount(); // Ahora como cadena de texto
         String nombreIniciador = transaction.getNameCompany();
@@ -29,10 +66,10 @@ public class XmlGenerator {
         String nombreDebtor = transaction.getNameClient();
         String ibanDebtor = transaction.getIbanClient();
         String mandatoId = "41023";
-        String fechaFirma = transaction.getDateV1();
+        String fechaFirma = DateV1;
 
         // Llamada a la función con los valores personalizados
-        crearArchivoXMLSEPA(".\\xml\\info.xml", msgId, creDtTm, nbOfTxs, ctrlSum, nombreIniciador, identificador,
+        crearArchivoXMLSEPA("..\\xml\\info.xml", msgId, creDtTm, nbOfTxs, ctrlSum, nombreIniciador, identificador,
                 pmtInfId, ctrlSumPmtInf, ibanCreditor, bic, nombreDebtor, ibanDebtor, mandatoId, fechaFirma);
     }
 

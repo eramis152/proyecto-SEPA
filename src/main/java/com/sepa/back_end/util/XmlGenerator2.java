@@ -14,6 +14,7 @@ public class XmlGenerator2 {
     }
 
     public void generarXml() {
+        
 
         // Variables dinámicas para los valores que deben ser personalizados
         String msgId = "PRE2018*****";
