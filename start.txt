@@ -1,0 +1,9 @@
+@echo off
+REM Inicia el servidor de Angular
+start cmd /k "cd src/main/java/com/sepa/front_end && ng serve"
+
+REM Abre la dirección web en el navegador
+start "" "http://localhost:4200"  REM Cambia a la URL deseada
+
+REM Espera 5 segundos (opcional, para que los servidores se inicien antes de abrir la web)
+timeout /t 7 /nobreak >nul
