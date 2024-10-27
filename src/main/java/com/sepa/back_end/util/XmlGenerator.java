@@ -42,8 +42,11 @@ public class XmlGenerator {
     }
 
     public void generateXML() {
+
+        int factureID = 0;
+        
         try{
-            int factureID = updateNumberInFile("numero.txt");
+             factureID = updateNumberInFile("numero.txt");
         } catch (IOException e) {
             System.out.println("Error al guardar la base: " + e.getMessage());
         }
@@ -53,7 +56,7 @@ public class XmlGenerator {
         String DateV1 = replaceSlashWithDash(transaction.getDateV1());
 
         // Variables dinámicas para los valores que deben ser personalizados
-        String msgId = "PRE2018*****";
+        String msgId = String.valueOf(factureID);
         String creDtTm = DateV2; // Acceso a la fecha desde la transacción
         String nbOfTxs = "1";
         String ctrlSum = transaction.getAmount(); // Ahora como cadena de texto
