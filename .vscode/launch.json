@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "runer",
+            "request": "launch",
+            "mainClass": "com.sepa.back_end.util.runer",
+            "projectName": "com.sepa-back_end"
+        },
+        {
+            "type": "java",
             "name": "test",
             "request": "launch",
             "mainClass": "com.sepa.back_end.util.test",

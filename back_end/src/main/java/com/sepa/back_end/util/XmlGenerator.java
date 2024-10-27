@@ -4,6 +4,9 @@ import com.sepa.back_end.entities.Transaction;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 public class XmlGenerator {
 
@@ -17,7 +20,34 @@ public class XmlGenerator {
         return input.replace('/', '-');
     }
 
+    public static int updateNumberInFile(String filePath) throws IOException {
+    String content = new String(Files.readAllBytes(Paths.get(filePath)));
+
+    int number = Integer.parseInt(content.trim());
+    number += 1;
+    Files.write(Paths.get(filePath), String.valueOf(number).getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
+    return number;
+    }
+
+    public static String modifyString(int number) {
+        String baseString = "PRE201800000";
+        
+        String numberStr = String.valueOf(number);
+
+        String paddedNumber = String.format("%06d", number);
+
+        String modifiedString = baseString.substring(0, baseString.length() - 6) + paddedNumber;
+
+        return modifiedString;
+    }
+
     public void generateXML() {
+        try{
+            int factureID = updateNumberInFile("numero.txt");
+        } catch (IOException e) {
+            System.out.println("Error al guardar la base: " + e.getMessage());
+        }
+        
 
         String DateV2 = replaceSlashWithDash(transaction.getDateV2());
         String DateV1 = replaceSlashWithDash(transaction.getDateV1());
