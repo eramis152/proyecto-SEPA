@@ -1,12 +1,12 @@
 <Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.008.001.02">
     <CstmrDrctDbtInitn>
         <GrpHdr>
-            <MsgId>1</MsgId>
+            <MsgId>2</MsgId>
             <CreDtTm>2024-10-27T13:28:39</CreDtTm>
             <NbOfTxs>1</NbOfTxs>
-            <CtrlSum>333</CtrlSum>
+            <CtrlSum>32</CtrlSum>
             <InitgPty>
-                <Nm>4444</Nm>
+                <Nm>232</Nm>
                 <Id>
                     <PrvtId>
                         <Othr>
@@ -21,7 +21,7 @@
             <PmtMtd>DD</PmtMtd>
             <BtchBookg>true</BtchBookg>
             <NbOfTxs>1</NbOfTxs>
-            <CtrlSum>333</CtrlSum>
+            <CtrlSum>32</CtrlSum>
             <PmtTpInf>
                 <SvcLvl>
                     <Cd>SEPA</Cd>
@@ -33,7 +33,7 @@
             </PmtTpInf>
             <ReqdColltnDt>2018-12-10</ReqdColltnDt>
             <Cdtr>
-                <Nm>4444</Nm>
+                <Nm>232</Nm>
             </Cdtr>
             <CdtrAcct>
                 <Id>
@@ -69,7 +69,7 @@
                         <AmdmntInd>true</AmdmntInd>
                         <AmdmntInfDtls>
                             <OrgnlCdtrSchmeId>
-                                <Nm>4444</Nm>
+                                <Nm>232</Nm>
                             </OrgnlCdtrSchmeId>
                         </AmdmntInfDtls>
                     </MndtRltdInf>
@@ -78,7 +78,7 @@
                     <FinInstnId/>
                 </DbtrAgt>
                 <Dbtr>
-                    <Nm>4444</Nm>
+                    <Nm>321</Nm>
                     <Id>
                         <PrvtId>
                             <Othr>
