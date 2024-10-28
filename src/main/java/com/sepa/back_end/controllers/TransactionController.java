@@ -1,16 +1,16 @@
 package com.sepa.back_end.controllers;
-import com.sepa.back_end.util.XmlGenerator;
-
-import org.springframework.web.bind.annotation.RestController;
-import com.sepa.back_end.entities.Transaction;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sepa.back_end.entities.Transaction;
+import com.sepa.back_end.util.XmlGenerator;
 
 @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 @RestController
@@ -46,8 +46,6 @@ public class TransactionController {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) { // 'true' para añadir al archivo
             writer.write(transaction.toString()); // Guarda la representación legible de la transacción
             writer.newLine(); // Añade nueva línea para la próxima transacción
-        } catch (IOException e) {
-            e.printStackTrace(); // Manejar excepciones adecuadamente
-        }
+        } catch (IOException e) {}
     }
 }

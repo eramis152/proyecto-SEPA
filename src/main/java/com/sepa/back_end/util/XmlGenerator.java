@@ -32,7 +32,7 @@ public class XmlGenerator {
     public static String modifyString(int number) {
         String baseString = "PRE201800000";
         
-        String numberStr = String.valueOf(number);
+        @SuppressWarnings("unused")String numberStr = String.valueOf(number);
 
         String paddedNumber = String.format("%06d", number);
 
