@@ -1,9 +1,14 @@
-.contenedor{
+body {
+  overflow-y: hidden; 
+}
+
+.contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 140vh; /* Ajusta a la altura completa de la pantalla */
+  height: 100vh; 
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
 
 form{
