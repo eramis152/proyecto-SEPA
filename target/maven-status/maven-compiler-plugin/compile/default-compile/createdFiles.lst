@@ -1,0 +1,7 @@
+com\sepa\back_end\cors\WebConfig.class
+com\sepa\back_end\controllers\TransactionController.class
+com\sepa\back_end\util\XmlGenerator.class
+com\sepa\back_end\util\util.class
+com\sepa\back_end\util\XmlGenerator2.class
+com\sepa\back_end\BackEndApplication.class
+com\sepa\back_end\entities\Transaction.class
