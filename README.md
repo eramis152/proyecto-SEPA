@@ -1,46 +1,84 @@
-# Proyecto Angular - Instrucciones de Instalación
+# Manual de Usuario  
+**Aplicación:** Proyecto-SEPA  
+**Versión:** 1.0  
+**Fecha:** Noviembre 2024  
 
-Una vez clonado el repositorio en tu maquina, este documento proporciona una guía paso a paso para instalar dependencias y ejecutar un proyecto Angular y Spring Boot en tu maquina.
+## Índice  
+1. [Introducción](#1-introducción)  
+2. [Requisitos del Sistema](#2-requisitos-del-sistema)  
+3. [Instalación](#3-instalación)  
+4. [Navegación por la Aplicación](#4-navegación-por-la-aplicación)  
+5. [Funcionalidades](#5-funcionalidades)  
+   - [5.1 Creación de documento XML](#51-creación-de-documento-xml)  
+6. [Configuración](#6-configuración)  
+7. [Desinstalación de dependencias](#7-desinstalación-de-dependencias)  
 
-## Requisitos previos
+---
 
-### Angular
-- **Node.js** (versión 12.x o superior) y **npm** (administrador de paquetes de Node.js).
-  
-  - Puedes descargar Node.js y npm desde [aquí](https://nodejs.org/).
-    
-  - Para verificar si están instalados, ejecuta los siguientes comandos en el PowerShell:
-    ```bash
-    node -v
-    npm -v
-    ```
-    
-- **Angular CLI** (Interfaz de Línea de Comandos de Angular) instalado globalmente:
-  - Si no lo tienes instalado, puedes hacerlo ejecutando:
-    ```bash
-    npm install -g @angular/cli
-    ```
+## 1. Introducción  
+La aplicación **Proyecto-SEPA** está diseñada para convertir datos adquiridos desde una página web externa a un XML generado desde una aplicación Java.  
 
-  - Si te salen errores en el proyecto angular despues de seguir estos pasos prueba lo siguiente dentro de la carpeta front_end:
-    ```bash
-    npm install
-    ```
+**SE RECOMIENDA ENCARECIDAMENTE LA INSTALACIÓN DE TODAS LAS DEPENDENCIAS Y EL SEGUIMIENTO PASO POR PASO PARA EL CORRECTO FUNCIONAMIENTO DE LA APLICACIÓN.**
 
-  - Por ultimo para lanzar el proyecto:
-    ```bash
-    ng serve
-    ```
-    cd src\main\java\com\sepa\front_end
-### Spring Boot
-- Como ejecutar y que extensiones descargar en VSCode:
-  - El proyecto esta hecho con la version de Java 17, si usas otra version el programa no funcionara al ejecutarlo.
+---
 
-  - Extensiones: <br>
-    ·Java Extension Pack. <br>
-    ·Spring Boot Extension Pack. <br>
- 
-  - Por ultimo abre la extension de Spring Boot Dashboard y le das al play o "Run"
+## 2. Requisitos del Sistema  
+- **Sistema Operativo:** Windows 10 o superior, macOS 10.15 o superior, Linux.  
+- **Espacio en Disco:** 301 MB.  
+- **Java Runtime Environment (JRE):** Versión 17 o superior.  
 
+---
 
+## 3. Instalación  
+1. Descargue el proyecto desde el link de GitHub.  
+2. Instale las dependencias de Node (archivo `z_node_intalation`):  
+   - Simplemente pulse *Siguiente* en todos los pasos del instalador.  
+3. Instale las dependencias de Spring Boot (archivo `z_install_dependences`).  
+4. Ejecute el Back End (archivo `z_start_back`):  
+   - Procure no cerrar la terminal, ya que de hacerlo finalizará el proceso.  
+5. Ejecute el Front End (archivo `z_start_front`):  
+   - Procure no cerrar la terminal, ya que de hacerlo finalizará el proceso.  
 
+---
+
+## 4. Navegación por la Aplicación  
+La aplicación cuenta con una página principal, la cual pedirá al usuario los diferentes campos a completar:  
+
+- **Nombre compañía:** Nombre al cual se ingresará la cantidad del importe.  
+- **IBAN empresa:** Código de identificación del número de cuenta de la empresa a abonar.  
+- **BIC Empresa:** Identificador del banco de la empresa a abonar.  
+- **Nombre cliente:** Nombre completo del pagador.  
+- **IBAN cliente:** Código de identificación del número de cuenta del pagador.  
+- **BIC cliente:** Identificador del banco del pagador.  
+- **Importe:** Cantidad de dinero abonada.  
+
+---
+
+## 5. Funcionalidades  
+
+### 5.1 Creación de documento XML  
+La aplicación Java generará un archivo XML con la estructura de un documento SEPA para su posterior validación.  
+
+La aplicación:  
+1. Recogerá el objeto generado por la aplicación web.  
+2. Introducirá los datos adquiridos en el XML generado.  
+3. Guardará el archivo XML en la carpeta `XML`.  
+
+---
+
+## 6. Configuración  
+La aplicación no requiere configuración previa.  
+
+---
+
+## 7. Desinstalación de dependencias  
+Para la limpieza definitiva de todas las dependencias instaladas previamente para la correcta ejecución del proyecto, siga estos pasos:  
+
+- **Node.js:**  
+  1. Acceda a `Aplicaciones > Aplicaciones instaladas`.  
+  2. Busque **Node.js** en el buscador.  
+  3. Desinstálelo. Esto eliminará todas las dependencias instaladas con Node.js.  
+
+- **Otras dependencias:**  
+  Al borrar la carpeta del proyecto, se eliminarán todas las dependencias locales instaladas en el mismo.  
 
