@@ -12,14 +12,24 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sepa.back_end.entities.Transaction;
 import com.sepa.back_end.util.XmlGenerator;
 
+
 @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 @RestController
 @RequestMapping("/transaction")
+
 public class TransactionController {
 
+    /**
+     * Guarda la transacción y genera un archivo XML correspondiente a la misma
+     * 
+     * @param transaction La transacción que contiene toda la información relevante 
+     *                    de la operacion, incluyendo datos de la empresa, cliente,
+     *                    monto y fechas de la transaccion
+     * @return La transaccion recibida después de haber sido guardada y procesada
+     */
     @PostMapping
     public Transaction emitTransaction(@RequestBody Transaction transaction) {
-        // Guardar la transacción en un archivo
+
         saveTransactionToFile(transaction);
         
         // Generar XML después de guardar la transacción
@@ -40,6 +50,13 @@ public class TransactionController {
         return transaction;
     }
 
+
+    /**
+     * Genera el archivo donde se guarda la informacion de la transaccion
+     * 
+     * @param transaction La transaccion que sera guardada en el archivo con toda la 
+     *                    informacion relevante para el xml
+     */
     private void saveTransactionToFile(Transaction transaction) {
         String filePath = "nada";  // Especifica el archivo en Documentos
     

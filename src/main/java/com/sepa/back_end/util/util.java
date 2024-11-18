@@ -5,6 +5,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
+/**
+ * Archivo que ayuda con la creacion del proyecto creando algunos archivos necesarios como el indice de la factura
+ */
 public class util {
     // Función para crear un archivo y escribir '0' en él si no existe.
     public static void createFileWithZero(String filePath) throws IOException {

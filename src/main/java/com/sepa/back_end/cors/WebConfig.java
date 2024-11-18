@@ -6,11 +6,20 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-
+    
+    /**
+     * Configura las reglas de CORS (Cross-Origin Resource Sharing) para la aplicacion
+     * 
+     * Permite solicitudes de origen "http://localhost:4200" y habilita los metodos
+     * HTTP especificados, tales como GET, POST, PUT, DELETE y OPTIONS en todos
+     * los endpoints de la aplicacion (indicados por "/**")
+     *
+     * @param registry el registro CORS utilizado para aplicar las configuraciones
+     */
     @Override
     public void addCorsMappings(@SuppressWarnings("null") CorsRegistry registry) {
-        registry.addMapping("/**") // Permite todas las rutas
-                .allowedOrigins("http://localhost:4200") // Permite el origen de tu aplicación Angular
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS"); // Métodos permitidos
+        registry.addMapping("/**") 
+                .allowedOrigins("http://localhost:4200") 
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS"); 
     }
 }
