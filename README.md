@@ -8,7 +8,7 @@
 2. [Requisitos del Sistema](#2-requisitos-del-sistema)  
 3. [Estructura de carpetas](#3-estructura-de-carpetas)
 4. [Instalación](#4-instalación)  
-5. [Validación del documento generado](#4-validación-del-documento-generado)
+5. [Validación del documento generado](#5-validación-del-documento-generado)
 
 ---
 
