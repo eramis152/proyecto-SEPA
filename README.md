@@ -41,8 +41,8 @@ La aplicación **Proyecto-SEPA** está diseñada para convertir datos adquiridos
 
 ---
 
-## 4. Navegación por la Aplicación  
-La aplicación cuenta con una página principal, la cual pedirá al usuario los diferentes campos a completar:  
+## 4. Validación del documento generado  
+Para validar el documento generado ( en la carpeta XML/info.xml ) acceda a la página [Página para validación](https://www.lasosl.com/validacion-ficheros-sepa) y adjunte el archivo.  
 
 - **Nombre compañía:** Nombre al cual se ingresará la cantidad del importe.  
 - **IBAN empresa:** Código de identificación del número de cuenta de la empresa a abonar.  
