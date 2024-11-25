@@ -31,12 +31,12 @@ La aplicación **Proyecto-SEPA** está diseñada para convertir datos adquiridos
 
 ## 3. Instalación  
 1. Descargue el proyecto desde el link de GitHub.  
-2. Instale las dependencias de Node (archivo `z_node_intalation`):  
+2. Instale las dependencias de Node (archivo `z1_node_instalation`):  
    - Simplemente pulse *Siguiente* en todos los pasos del instalador.  
-3. Instale las dependencias de Spring Boot (archivo `z_install_dependences`).  
-4. Ejecute el Back End (archivo `z_start_back`):  
+3. Instale las dependencias de Spring Boot (archivo `z2_install_dependences`).  
+4. Ejecute el Back End (archivo `z3_start_back`):  
    - Procure no cerrar la terminal, ya que de hacerlo finalizará el proceso.  
-5. Ejecute el Front End (archivo `z_start_front`):  
+5. Ejecute el Front End (archivo `z4_start_front`):  
    - Procure no cerrar la terminal, ya que de hacerlo finalizará el proceso.  
 
 ---
