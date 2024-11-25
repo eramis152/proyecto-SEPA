@@ -7,11 +7,7 @@
 1. [Introducción](#1-introducción)  
 2. [Requisitos del Sistema](#2-requisitos-del-sistema)  
 3. [Instalación](#3-instalación)  
-4. [Navegación por la Aplicación](#4-navegación-por-la-aplicación)  
-5. [Funcionalidades](#5-funcionalidades)  
-   - [5.1 Creación de documento XML](#51-creación-de-documento-xml)  
-6. [Configuración](#6-configuración)  
-7. [Desinstalación de dependencias](#7-desinstalación-de-dependencias)  
+4. [Validación del documento generado](#4-Validación-del-documento-generado)  
 
 ---
 
